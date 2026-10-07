@@ -1,0 +1,14 @@
+{
+  "name": "claude-cache-timer",
+  "description": "Prompt cache countdown and keep-alive for Claude Code",
+  "owner": {
+    "name": "Marek Bartczak"
+  },
+  "plugins": [
+    {
+      "name": "cache-timer",
+      "source": "./",
+      "description": "Live countdown above the prompt until your session's prompt cache expires, with an optional keep-alive that keeps it warm while you're away"
+    }
+  ]
+}

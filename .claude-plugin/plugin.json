@@ -1,0 +1,44 @@
+{
+  "name": "cache-timer",
+  "version": "0.2.0",
+  "description": "Live countdown above the prompt until your session's prompt cache expires, with an optional keep-alive that keeps it warm while you're away",
+  "author": {
+    "name": "Marek Bartczak"
+  },
+  "homepage": "https://github.com/MarekBartczak/claude-cache-timer",
+  "repository": "https://github.com/MarekBartczak/claude-cache-timer",
+  "license": "MIT",
+  "keywords": [
+    "prompt-cache",
+    "cache",
+    "keep-alive",
+    "tokens",
+    "status"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "ttl": {
+      "type": "string",
+      "title": "Prompt cache TTL",
+      "description": "Assumed TTL until the mod learns the real one (model switch or an observed cache hit/miss)",
+      "default": "1h",
+      "options": [
+        "1h",
+        "5m"
+      ]
+    },
+    "keepAlive": {
+      "type": "string",
+      "title": "Cache keep-alive",
+      "description": "How long after your last prompt to keep refreshing the cache before it expires (each refresh is one cache read of the session)",
+      "default": "4h",
+      "options": [
+        "off",
+        "1h",
+        "2h",
+        "4h",
+        "8h"
+      ]
+    }
+  }
+}
